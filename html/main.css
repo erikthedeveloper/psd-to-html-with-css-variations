@@ -1,0 +1,574 @@
+/**
+*
+* Colors
+*
+**/
+/*
+
+	Main Text ... Maybe
+		#616060
+
+	Blue (Nav Active)
+		#85a0b1
+
+	Blue (Box Background)
+		#b7c5cf
+	Blue (Box Border)
+		#d5dde0
+
+
+ */
+
+/**
+*
+* Fonts
+*
+**/
+
+@font-face {
+	font-family: 'museo-slab';
+	font-weight: normal;
+	font-style: normal;
+	src: url('fonts/Museo_Slab_500_2-webfont.ttf');
+}
+.font-museo-slab {
+	font-family: 'museo-slab';
+}
+@font-face {
+	font-family: 'museo-slab';
+	font-style: italic;
+	src: url('fonts/Museo_Slab_500italic-webfont.ttf');
+}
+
+@font-face {
+	font-family: 'PT Sans';
+	font-weight: normal;
+	font-style: normal;
+	src: url('fonts/pts.ttf');
+}
+@font-face {
+	font-family: 'PT Sans';
+	font-weight: bold;
+	font-style: normal;
+	src: url('fonts/pts-bold.ttf');
+}
+@font-face {
+	font-family: 'PT Sans';
+	font-weight: normal;
+	font-style: italic;
+	src: url('fonts/pts-italic.ttf');
+}
+.font-pt-sans {
+	font-family: 'PT Sans';
+}
+
+
+
+/**
+*
+* HTML Elements
+*
+**/
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.box-content-box {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.box-border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+
+}
+body {
+	font-family: 'museo-slab';
+	background-color: #e1dfdb;
+	background-image: url('img/bg-2x2.png');
+	color: #616060;
+}
+
+p {
+	font-size: 13px;
+	font-family: "PT Sans";
+}
+
+small, .text-small {
+	font-size: 11px;
+}
+
+
+
+.outer-wrapper {
+	padding-top: 45px;
+}
+
+.inner-wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+/*==============================================
+=            Reusable Color Classes            =
+==============================================*/
+.text-color-accent { /* Light Blue */
+	color: #85a0b1;
+}
+.text-color-gray-light {
+	color: #787878;
+}
+
+
+
+
+
+
+/*==========================================
+=            Header and Top Nav            =
+==========================================*/
+
+.header {
+	margin-bottom: 35px;
+}
+
+.nav ul {
+	list-style-type: none;
+}
+.nav li {
+	padding: 15px 10px;
+	display: inline-block;
+	font-size: 13px;
+}
+.nav a{
+	text-decoration: none;
+	color: inherit;
+}
+.nav .active a, .nav a:hover {
+	color: #85a0b1;
+}
+.nav .active a:before {
+	padding-right: 5px;
+	content: "\2022";
+}
+
+/*==================================
+=            Slide Show            =
+==================================*/
+.slider-container {
+	position: relative;
+}
+.slider-container .slider-controls {
+	position: absolute;
+	bottom: 0;
+	left: 15px;
+}
+.slider-container .slide {
+	position: relative;
+}
+.slider-container .slide .caption {
+	position: absolute;
+	top: 40%;
+	left: 0;
+}
+
+.slider-controls ul {
+	padding: 0;
+}
+.slider-controls a {
+	padding: 6px;
+	text-decoration: none;
+	color: #222222;
+	opacity: 0.7;
+}
+.slider-controls .active a {
+	opacity: 1;
+}
+.slider-controls a:before {
+	font-size: 20px;
+	content: "\2022";
+}
+
+.caption-block {
+	padding: 10px 20px;
+	margin: 3px 0;
+	width: auto;
+	display: inline-block;
+	/* TODO Color*/
+	color: #FFF;
+	opacity: 0.8;
+}
+
+.caption-block-blue {
+	font-size: 20px;
+	/* TODO Color */
+	background-color: #9ba3b0;
+}
+.caption-block-tan {
+	font-size: 30px;
+	/* TODO Color */
+	background-color: #c6b393;
+}
+
+
+
+/**
+ *
+ * Poorly Organized
+ *
+ */
+
+
+ .round-blue-number {
+	 text-align: center;
+	 font-family: 'museo-slab';
+	 font-style: italic;
+	 font-size: 20px;
+	 color: #fff;
+	 padding-top: 4px;
+	 background-color: #82AEC9;
+	 border-radius: 50px;
+	 border: 3px solid rgb(210, 203, 203);
+	 width: 35px;
+	 height: 35px;
+ }
+
+.background-number-big {
+	font-size: 100px;
+	font-style: italic;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	opacity: 0.05;
+}
+
+.btn {
+	font-family: "PT Sans";
+	font-weight: 300;
+	font-size: 13px;
+	border: 3px solid #e1dede;
+	color: #fff;
+	background-color: #a8bdcb;
+	position: relative;
+	padding: 8px 10px;
+	padding-right: 30px;
+
+	float:right;
+}
+
+.btn:after {
+	content: "\25BA";
+	font-size: 8px;
+	padding-top: 3px;
+	background-color: #8ca6b6;
+	height: 15px;
+	width: 15px;
+	border-radius: 50px;
+	display: block;
+	position: absolute;
+	top: 8px;
+	right: 5px;
+}
+
+.btn:hover {
+	background-color: #84AFCB;
+}
+
+
+/*==============================
+=            Footer            =
+==============================*/
+
+.footer {
+	width: 100%;
+	clear: both;
+}
+
+.footer ul {
+	list-style-type: none;
+	font-size: 12px;
+}
+
+.footer li a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.footer-social-icons {
+	padding-left: 80px;
+}
+
+ul.list-style-triangle {
+	padding-left: 25px;
+	font-family: "PT Sans";
+	font-size: 12px;
+}
+.list-style-triangle li {
+	border: 1px dashed gray;
+	padding: 0 0 5px;
+	border-width: 0 0 1px 0;
+}
+.list-style-triangle li:before {
+	content: "";
+	border-color: transparent #7d8488;
+	border-style: solid;
+	border-width: 0.35em 0 0.35em 0.45em;
+	display: block;
+	height: 0;
+	width: 0;
+	left: -1em;
+	top: 0.9em;
+	position: relative;
+}
+
+.flickr-thumb {
+	float: left;
+	margin: 8px;
+	height: 60px;
+	width: 60px;
+	border: 5px solid #a7b9c6;
+	box-sizing: content-box;
+}
+
+/**
+*
+* Semi-Specific Use
+*
+**/
+
+.big-quote-row {
+	font-family: 'museo-slab';
+	font-size: 20px;
+	font-style: italic;
+	text-align: center;
+	padding: 15px 30px;
+	margin: 35px 0;
+}
+
+.dotted-row:before {
+	content: "";
+	display: block;
+	height: 10px;
+	background-image: url('img/stacked-dots-sliver.png');
+	background-repeat: repeat-x;
+}
+
+.blocky-background {
+	padding-right: 10px;
+	float: left;
+	background-color: #e1dfdb;
+	background-image: url('img/bg-2x2.png');
+}
+
+.shadow-box-blue {
+	background-color: #b7c5cf;
+	border: 15px solid #d5dde0;
+	padding: 20px;
+	position: relative;
+	overflow: visible !important;
+}
+
+.row.shadow-box-blue {
+	margin-top: 50px;
+	margin-bottom: 15px;
+}
+.row.shadow-box-blue:before {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    width: 0;
+    left: 80px;
+    height: 0;
+    z-index: 55;
+    /* border-top: 12px solid transparent; */
+    border-right: 53px solid #b7c5cf;
+    border-bottom: 40px solid transparent;    margin: 13px 0 0 -25px;
+}
+
+.shadow-box-quote {
+	position: relative;
+}
+.shadow-box-quote p {
+	font-size: 19px;
+	color: rgba(255,255,255, 0.8);
+	font-family: "PT Sans";
+	font-style: italic;
+	line-height: 28px;
+}
+.shadow-box-quote p:before {
+	content: "";
+	position: absolute;
+	bottom: -40px;
+	width: 0;
+	right: 38px;
+	height: 0;
+	z-index: 55;
+	border-top: 12px solid transparent;
+	border-left: 53px solid #b7c5cf;
+	border-bottom: 40px solid transparent;
+	margin: 13px 0 0 -25px;
+}
+
+.shadow-box-quote:before, .shadow-box-quote:after {
+	font-family: "Times New Roman";
+	font-style: italic;
+	font-size: 192px;
+	color: #fff;
+	opacity: 0.3;
+	position: absolute;
+}
+.shadow-box-quote:before {
+	content: "\201C";
+	top: -25px;
+	left: -15px;
+}
+.shadow-box-quote:after {
+	content: "\201D";
+	bottom: -110px;
+	right: 25px;
+}
+
+.tricky-striped-border {
+	padding: 10px;
+	background-image: url('img/border-striped.png');
+	/*background-image: url('http://directionless.mynoisebleeds.com/vt3000/layout/images/border.png');*/
+}
+
+.widget-posts h5 {
+	margin-bottom: 0;
+}
+
+/**
+ * Great in theory... Horrid in reality
+ */
+/*.tricky-striped-border:after {
+	background: gray;
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,.5) 5px, rgba(255,255,255,.5) 12px);
+
+	content: "";
+	display: block;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	position: absolute;
+	top: -10px;
+	left: -10px;
+}*/
+
+
+/**
+*
+* Positioning, Display, Misc Utility Classes
+*
+**/
+
+.float-left {float: left;}
+.float-right {float: right;}
+
+.clearfix {clear: both;}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+
+.font-italic { font-style: italic;}
+
+.list-inline li {display: inline-block;}
+/**
+*
+* Grid
+*
+**/
+
+.row {
+	width: 100%;
+	clear: both;
+	overflow: hidden;
+}
+
+.col-1 {
+	width: 8.333333%;
+}
+.col-2 {
+	width: 16.66666%;
+}
+.col-3 {
+	width: 25%;
+}
+.col-4 {
+	width: 33.333333%;
+}
+.col-5 {
+	width: 41.66666%;
+}
+.col-6 {
+	width: 50%;
+}
+.col-7 {
+	width: 58.33333%;
+}
+.col-8 {
+	width: 66.666666%;
+}
+.col-9 {
+	width: 75%;
+}
+.col-10 {
+	width: 83.33333%;
+}
+.col-11 {
+	width: 91.66666%;
+}
+.col-12 {
+	width: 100%;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+	float: left;
+	/*overflow: hidden;*/
+	position: relative;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11 {
+	padding-left: 15px;
+	padding-right: 15px;
+}

@@ -130,7 +130,9 @@ small, .text-small {
 }
 
 
-
+.pos-relative {
+	position: relative;
+}
 
 
 
@@ -361,6 +363,9 @@ ul.list-style-triangle {
 	height: 10px;
 	background-image: url('img/stacked-dots-sliver.png');
 	background-repeat: repeat-x;
+	clear: both;
+
+	z-index: -1;
 }
 
 .blocky-background {

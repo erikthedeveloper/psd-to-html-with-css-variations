@@ -23,11 +23,11 @@
 			<!-- Header -->
 			<header class="header">
 
-				<div class="float-left">
+				<div class="grid_4">
 					<img src="img/imperio-logo-with-text.png" alt="">
 				</div>
 
-				<nav class="nav float-right">
+				<nav class="nav grid_6 push_2">
 					<?php $top_nav_links = ['Home' => '#', 'About' => '#', 'Services' => '#', 'Portfolio' => '#', 'Contact' => '#', 'Blog' => '#']; ?>
 					<ul>
 						<?php foreach ($top_nav_links as $name => $href): ?>
@@ -88,20 +88,20 @@
 
 
 			<div class="container_12">
-				<div class="dotted-row" style="position: relative; top: 36px;"></div>
+
 				<!-- Why are We Awesome? -->
 				<div class="grid_6">
-					<h3 class="blocky-background">Why are We Awesome? <div class="float-right dotted-row"></div></h3>
+					<h3 class="blocky-background">Why are We Awesome?</h3>
 					<div class="clearfix"></div>
 
 						<?php foreach ([1,2,3] as $i): ?>
-						<div class="">
+						<div class="grid_6 alpha">
 							<div class="grid_1 alpha" style="padding-top:30px;">
 								<div class="round-blue-number">
 									<?php echo $i; ?>
 								</div>
 							</div>
-							<div class="grid_2 text-center" style="padding-top:30px;">
+							<div class="grid_2 text-center pos-relative" style="padding-top:30px;">
 								<strong>
 									The sort of tagline thing here
 								</strong>
@@ -115,7 +115,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="dotted-row"></div>
+						<?php if ($i < 3): ?> <div class="dotted-row"></div> <?php endif; ?>
 						<?php endforeach ?>
 
 						<button class="btn btn-accent">View Services</button>
@@ -144,7 +144,7 @@
 
 
 			<div class="container_12">
-				<div class="dotted-row" style="position: relative; top: 36px;"></div>
+
 				<!-- From the Blog -->
 				<div class="grid_6 widget-posts">
 					<h3 class="blocky-background">From the Blog</h3>
@@ -259,16 +259,16 @@
 			<footer class="footer">
 
 				<!-- Big Blue Quote Box -->
-				<div class="container_12 shadow-box-blue">
+				<div class="shadow-box-blue">
 
-					<div class="grid_4">
+					<div class="grid_4 alpha">
 						<img src="img/imperio-logo-with-text.png" alt="">
 						<p class="font-italic text-color-gray-light">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, beatae officia sequi ullam provident? Cumque, nemo, quod, facere, necessitatibus nam enim sit eum voluptate omnis repudiandae modi magni magnam est eaque ipsam tempore possimus voluptatum!
 						</p>
 					</div>
 
-					<div class="grid_4">
+					<div class="grid_3">
 						<h5>Quick Links</h5>
 						<!-- (ul.float-left>(li>a{ListItem$})*5)*2 -->
 						<?php $footer_quick_links = [
@@ -296,7 +296,7 @@
 						<?php endforeach ?>
 					</div>
 
-					<div class="grid_4">
+					<div class="grid_4 omega">
 						<h5>Flickr Stream</h5>
 						<?php $flickr_images = ['#','#','#','#','#','#'] ?>
 						<?php foreach ($flickr_images as $src): ?>
